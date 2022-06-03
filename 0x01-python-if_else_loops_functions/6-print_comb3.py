@@ -1,4 +1,7 @@
 #!/usr/bin/python3
-print(*(', '.join(
-    "{}{}".format(tens, ones) for ones in range(tens+1, 10)
-    ) for tens in range(9)), sep=', ')
+for num in range(0, 90):
+    if num % 10 > num / 10:
+        if num != 89:
+            print("{:02d}, ".format(num), end='')
+        else:
+            print(f"{num:02d}".format(num))
