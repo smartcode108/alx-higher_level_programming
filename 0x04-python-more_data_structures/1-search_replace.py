@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+
+
 def search_replace(my_list, search, replace):
-    items = len(my_list)
-    new_list = my_list.copy()
-    for i in range(items):
-        if new_list[i] == search:
-            new_list[i] = replace
-    return new_list
+    """ Create a new list with all occurrences of an element replaced
+    """
+    if my_list is not None:
+        return [x if x != search else replace for x in my_list]
+    return None
